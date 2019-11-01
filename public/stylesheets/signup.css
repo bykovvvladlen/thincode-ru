@@ -1,0 +1,47 @@
+.container .content {
+  margin: auto; }
+
+.signup h1 {
+  margin-top: 0; }
+
+.signup .title {
+  margin-top: 8px;
+  margin-bottom: 2px;
+  display: none;
+  align-items: end;
+  color: orange; }
+  .signup .title i {
+    font-size: 18px;
+    margin-right: 6px; }
+  .signup .title p {
+    margin: 0; }
+
+.signup p {
+  margin-top: 8px;
+  margin-bottom: 2px; }
+
+.signup input {
+  padding: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: inset 0px 4px 4px #eaeaea;
+  background: #f1f1f1;
+  outline: none;
+  font-size: 16px; }
+
+.signup input[type='password'] {
+  margin-bottom: 8px; }
+
+.signup button {
+  margin-top: 8px; }
+  @media (max-width: 768px) {
+    .signup button {
+      width: 100%; } }
+
+.signup .btn-group {
+  display: flex;
+  justify-content: flex-end; }
+
+/*# sourceMappingURL=signup.css.map */

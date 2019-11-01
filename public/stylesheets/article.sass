@@ -1,0 +1,105 @@
+.container > .content
+  img
+    max-width: 100%
+    border-radius: 3px
+    user-select: none
+    display: block
+    margin: auto
+
+.rating
+  .text
+    margin-top: 0
+  .thanks
+    display: none
+  button:not(:last-child)
+    margin-right: 16px
+pre
+  font-size: 14px !important
+  @media(max-width: 768px)
+    font-size: 12px !important
+
+.comments
+  textarea
+    border-color: lightgray
+  .comment
+    margin-bottom: 16px
+    span.dot
+      background: gray
+    .author, .date, a
+      display: inline-block
+    .author
+      font-weight: 500
+    .date
+      color: gray
+    a
+      margin-left: 8px
+      display: none
+  .comment:hover a
+    display: inline-block
+
+.keywords
+  display: flex
+  flex-wrap: wrap
+
+.sections
+  ol
+    padding-left: 20px
+  a
+    color: black
+    text-decoration: none
+    border-bottom: 1px dotted gray
+  a:hover
+    color: gray
+
+.recommendation
+  .dot
+    background: gray
+  .date, .category
+    color: gray
+    display: inline
+  a
+    color: #4848d4
+    display: block
+    font-weight: 500
+
+.comments
+  .noone
+    color: gray
+  .form
+    display: flex
+    button
+      border: none
+      background: none
+      cursor: pointer
+      color: gray
+      outline: none
+    button:hover
+      color: black
+    textarea
+      font-family: inherit
+      padding: 8px
+      font-size: 16px
+      resize: none
+      outline: none
+      width: 100%
+
+.article
+  .group
+    display: flex
+    flex-wrap: wrap
+    margin-top: 16px
+    .item
+      margin-right: 16px
+      // width: 50%
+
+.markup
+  img
+    margin-bottom: 16px !important
+  .paragraph
+    margin-bottom: 16px
+  a
+    color: #3F51B5
+  span.marked
+    background: #ddd
+    color: #4c3800
+    padding: 0 4px

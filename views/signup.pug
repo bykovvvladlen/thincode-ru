@@ -1,0 +1,34 @@
+extends layout
+
+block styles
+  link(rel='stylesheet' href='/stylesheets/signup.css')
+  
+block scripts
+  script(src='/javascripts/simp.experimental.js')
+  script(src='/javascripts/signup.js')
+
+block content
+  .signup
+    h1 Регистрация
+    .description Создание учетной записи откроет доступ к обсуждениям. 
+    .title.login
+      i.material-icons warning
+      p
+    p Логин (не менее 3 символов)
+    input.login(placeholder='Логин' type='text')
+    .title.email
+      i.material-icons warning
+      p
+    p Электронная почта
+    input.email(placeholder='email@example.ru' type='text')
+    .title.pass
+      i.material-icons warning
+      p
+    p Пароль (только буквы и цифры)
+    input.pass(placeholder='Пароль' type='password')
+    input.confirm(placeholder='Подтвердите пароль' type='password')
+    .btn-group
+      button.softbutton.done Зарегистрироваться
+  .signup-done
+    h1 Регистрация завершена
+    p Теперь вы можете войти в свою учетную запись.

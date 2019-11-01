@@ -1,0 +1,78 @@
+extends layout
+
+block styles
+  link(rel='stylesheet' href='/stylesheets/control.css')
+
+block scripts
+  script(src='/javascripts/modal.js')
+  script(src='/javascripts/simp.experimental.js')
+  script(src='/javascripts/editor.js')
+  script(src='/javascripts/shell.collection.js')
+  script(src='/javascripts/control.js')
+
+block content
+  if access
+    .articleEditor
+      .listOfArticles
+        h1 Список статей
+        .viewer
+          .noOneArticle Здесь пока нет ни одной статьи.
+        hr
+        .group
+          button.common-btn.parse Спарсить из строки
+          button.common-btn.addArticle Добавить 
+            strong +
+      .detailedArticle
+        h1.title Редактирование
+        .form.information
+          input.title(placeholder='Заголовок' data-simp-id='title')
+          input.keywords(placeholder='Ключевые слова' data-simp-id='keywords')
+          input.category(placeholder='Категория' data-simp-id='category')
+          select.folder(title='Группа видимости' data-simp-id='folder')
+            option(value='public') Публикации
+            option(value='draft') Черновик
+            option(value='archive') Архив
+        .markup
+          .panel
+            .mode
+              button.common-btn.cancelMode Назад
+            .controls
+              .group
+                button.common-btn.right-icon.deleteElement
+                  i.material-icons delete
+                  span Удалить элемент
+                button.common-btn.right-icon.editElement 
+                  i.material-icons edit
+                  span Изменить элемент
+                button.common-btn.right-icon.moveElement
+                  i.material-icons open_with
+                  span Переместить элемент
+              .group
+                select.element
+                  option(value='title') Заголовок
+                  option(value='description') Описание
+                  option(value='paragraph') Абзац
+                  option(value='code') Код
+                  option(value='image') Изображение
+                button.common-btn.addElement 
+                  span Добавить элемент
+                  i.material-icons add
+            hr
+            .other
+              button.common-btn.cancel
+                | Отмена
+                i.material-icons clear
+              button.common-btn.save 
+                | Сохранить
+                i.material-icons done
+          .markupTitle
+            span Разметка
+            .buttons
+              i.render.material-icons(title='Отрендерить') code
+          .viewer
+            .noOneElement Здесь нет ни одного элемента.
+  else
+    .login
+      .error
+        h1.title Ошибка доступа
+        p.text Эта страница доступна только администраторам.

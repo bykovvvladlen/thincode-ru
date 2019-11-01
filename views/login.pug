@@ -1,0 +1,19 @@
+extends layout
+
+block styles
+  link(rel='stylesheet' href='/stylesheets/login.css')
+
+block scripts
+  script(src='/javascripts/login.js')
+
+block content
+  if authed
+    .login
+      h1 Авторизация
+      p Завершите текущую сессию, чтобы авторизоваться заново.
+  else
+    .login
+      h1 Авторизация
+      input.login(placeholder='Имя пользователя' type='text')
+      input.password(placeholder='Пароль' type='password')
+      button.softbutton.submit Авторизация

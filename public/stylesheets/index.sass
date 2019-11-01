@@ -1,0 +1,49 @@
+.article
+  padding: 0 !important
+  .title
+    text-decoration: none
+    h2
+      margin: 0
+      padding: 16px 16px 8px 16px
+      font-size: 32px
+      font-weight: 600
+      color: black
+  .keywords
+    margin: 16px 16px 0 16px
+    color: gray
+    display: flex
+    flex-wrap: wrap
+    span
+      cursor: pointer
+    span:hover
+      color: darkgray
+    span:not(:last-child)
+      margin-right: 8px
+  .image
+    width: 100%
+    padding: 0 16px
+    box-sizing: border-box
+    border-radius: 4px
+    @media(max-width: 768px)
+      border-radius: 0
+      padding: 0
+  .details
+    display: inline-flex
+    align-items: center
+    margin: 0 16px 16px 16px
+    .readtime
+      display: inline-flex
+      align-items: center
+      img
+        width: 24px
+        height: 24px
+        margin: 0 6px 0 4px
+  .description
+    margin: 16px 16px 0 16px
+  .buttons
+    display: flex
+    justify-content: flex-end
+    padding: 16px
+    .read
+      @media(max-width: 768px)
+        width: 100%

@@ -1,0 +1,79 @@
+extends layout
+
+mixin recommended(item)
+  .article
+    a.title(href='../articles/'+item.url)= item.title
+    .category= item.category
+    span.dot
+    .date= item.date
+    
+mixin comment(item)
+  .comment
+    .author= item.author
+    span.dot
+    .date= item.date
+    a(href="#") Ответить
+    .text= item.text
+
+block styles
+  link(rel='stylesheet' href='/stylesheets/themes/prism.css')
+  link(rel='stylesheet' href='/stylesheets/article.css')
+
+block scripts
+  script(src='/javascripts/prism.js')
+  script(src='/javascripts/article.js')
+  
+block content
+  .article(data-id=article.id)
+    .group
+      .item
+        .ghost Опубликовано
+        .date= article.date
+      .item
+        .ghost Категория
+        .category= article.category
+    h1.title= article.title
+    .markup
+      each item in article.markup
+        | !{item}
+    .ghost Теги
+    .keywords
+      each word in article.keywords
+        span= word
+  .rating
+    h2.text Вам была полезна эта статья?
+    p.thanks Спасибо за ваш отзыв!
+    .controls
+      button.softbutton.yes Да
+      button.softbutton.no Нет
+      button.softbutton.change Изменить
+        
+block sidebar
+  .sections
+    h2 Содержание
+    ol.list
+  .recommendation
+    h2 Рекомендации
+    if recommendations && recommendations.length > 0
+      each item in recommendations
+        +recommended(item)
+    else
+      p.noone Не удалось подобрать рекомендации
+  .comments
+    h2 Обсуждение
+    if (comments && comments.length > 0)
+      each item in comments
+        +comment(item)
+    else
+      p.noone Нет ни одного комментария.
+    if authed
+      .form
+        textarea(placeholder='Оставьте свой комментарий')
+        button.send(title='Отправить')
+         i.material-icons send
+    else
+      p 
+        a(href='/signup') Зарегистрируйтесь
+        |  или 
+        a(href='/login') войдите
+        | , чтобы участвовать в обсуждении.

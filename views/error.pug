@@ -1,0 +1,22 @@
+extends layout
+
+block scripts
+  script(src='/javascripts/notfound.js')
+  
+block styles
+  link(rel='stylesheet' href='/stylesheets/error.css')
+  
+block content
+  .error
+    if error.status == 404
+      h1.title
+        span 4
+        span 0
+        span 4
+      .description 
+        p Страница не найдена.
+        p Возможно она была удалена или перемещена, воспользуйтесь поиском
+    else
+      h1= message
+      h2= error.status
+      pre #{error.stack}

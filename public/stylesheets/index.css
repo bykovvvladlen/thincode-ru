@@ -1,0 +1,52 @@
+.article {
+  padding: 0 !important; }
+  .article .title {
+    text-decoration: none; }
+    .article .title h2 {
+      margin: 0;
+      padding: 16px 16px 8px 16px;
+      font-size: 32px;
+      font-weight: 600;
+      color: black; }
+  .article .keywords {
+    margin: 16px 16px 0 16px;
+    color: gray;
+    display: flex;
+    flex-wrap: wrap; }
+    .article .keywords span {
+      cursor: pointer; }
+    .article .keywords span:hover {
+      color: darkgray; }
+    .article .keywords span:not(:last-child) {
+      margin-right: 8px; }
+  .article .image {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    border-radius: 4px; }
+    @media (max-width: 768px) {
+      .article .image {
+        border-radius: 0;
+        padding: 0; } }
+  .article .details {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 16px 16px 16px; }
+    .article .details .readtime {
+      display: inline-flex;
+      align-items: center; }
+      .article .details .readtime img {
+        width: 24px;
+        height: 24px;
+        margin: 0 6px 0 4px; }
+  .article .description {
+    margin: 16px 16px 0 16px; }
+  .article .buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px; }
+    @media (max-width: 768px) {
+      .article .buttons .read {
+        width: 100%; } }
+
+/*# sourceMappingURL=index.css.map */

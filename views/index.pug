@@ -1,0 +1,33 @@
+extends layout
+
+mixin article(item)
+  .article
+    a.title(href='/articles/'+item.url)
+      h2= item.title
+    .details
+      .category= item.category
+      span.dot
+      .date= item.date
+      span.dot
+      .readtime(title='Примерное время чтения')
+        img(src='/images/readtime.svg')
+        .value= item.readtime
+    img.image(src=item.image)
+    .description= item.description
+    .keywords
+      if item.keywords && item.keywords.length > 0
+        each word in item.keywords
+          span= word 
+    .buttons
+      a.softbutton.read(href='/articles/'+item.url) Читать далее
+      
+block styles
+  link(rel='stylesheet' href='/stylesheets/index.css')
+
+block content
+  each item in articles
+    +article(item)
+
+block sidebar
+  .warn На текущий момент сайт находится в стадии активной разработки. Некоторые из доступных функций могут не работать или работать неправильно.
+  .question Статьи на какие темы вы бы хотели видеть на thincode?

@@ -1,0 +1,64 @@
+extends layout
+
+block styles
+  link(rel='stylesheet' href='/stylesheets/projectpage.css')
+
+block scripts
+  script(src='/javascripts/projects.js')
+  
+block content
+  .project
+    .title
+      h1.value= project.title
+      if posts.length > 0
+        .last-version
+          .label 
+            span Последняя 
+            span версия 
+          .value= posts[0].version
+    img(src='https://i.ibb.co/dWCWLZH/test2222.png')
+    if project.startDate
+      .daterange.block-with-icon
+        i.material-icons date_range 
+        .body
+          .label Сроки
+          .value
+            if project.endDate
+              span Был в разработке с 
+              span= project.startDateString
+              span  по 
+              span= project.endDateString
+            else
+              span В разработке с 
+              span= project.startDateString
+              span  по настоящее время.
+    if project.repository
+      .repository.block-with-icon 
+        i.material-icons work
+        .body
+          .label Репозиторий
+          a.value(href=project.repository)= project.repository
+    .description.block-with-icon
+      i.material-icons description
+      .body
+        .label Описание
+        .value= project.description
+  .posts-count
+    if posts.length > 0
+      span.count-of-posts= posts.length
+      span
+        if posts.length > 1
+          |  постов
+        else
+          |  пост
+    else
+      span Нет постов
+  if posts.length > 0
+    each post in posts
+      .post
+        h2.version= post.version
+        .body
+          .text= post.body
+          .timestamp= post.date
+block sidebar
+  .message В данном разделе вы можете ознакомиться с моими проектами. 

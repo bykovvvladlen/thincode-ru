@@ -1,0 +1,209 @@
+$dark-color: #2d303a
+$gray-color: #d5d7de
+$light-color: #aaa
+$border-color: #ccc
+$background-color: #ddd
+
+// Обычная кнопка
+$common-btn-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3)
+$common-btn-hover-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.1)
+.common-btn
+  padding: 8px
+  background: $gray-color
+  border: solid $light-color 1px
+  box-shadow: $common-btn-shadow
+  outline: none
+  display: inline-flex
+  align-items: center
+  cursor: pointer
+  border-radius: 3px
+  i.material-icons
+    font-size: 18px
+    max-height: 12px
+    margin-left: 4px
+    transform: translateY(-4px)
+.common-btn.right-icon
+  i.material-icons
+    margin-left: 0px !important
+    margin-right: 4px !important
+.common-btn:hover
+  box-shadow: $common-btn-hover-shadow
+.common-btn:active
+  background: $border-color
+
+$select-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.25)
+select
+  padding: 8px
+  font-family: inherit
+  font-size: 14px
+  outline: none
+  box-shadow: $select-shadow
+.container
+  .content
+    margin: auto
+.detailedArticle
+  input
+    padding: 8px
+    box-shadow: $select-shadow
+    border: 1px $border-color solid
+    font-family: inherit
+    font-size: 14px
+    margin-bottom: 4px
+    outline: 0
+  .form
+    display: flex
+    flex-direction: column
+  .markup
+  .markupTitle
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: $dark-color
+    padding: 4px
+    margin: 8px 0
+    color: white
+    .buttons
+      display: flex
+      i
+        cursor: pointer
+      i:hover
+        color: lightgray
+      i:active
+        color: gray
+  .viewer
+    .elementShell:not(:last-child)
+      margin-bottom: 4px
+    .elementShell
+      border: 1px solid $border-color
+      transition: 0.2s
+      .shellHeader
+        padding: 4px
+        background: $background-color
+        text-transform: uppercase
+        font-size: 10px
+        margin: 0
+        color: $light-color
+      .contentElement
+        a
+          color: #3F51B5
+        span.marked
+          background: #ddd
+          color: #4c3800
+          padding: 0 4px
+        .inputsGroup
+          input
+            display: block
+            width: 100%
+        padding: 4px 4px 4px 4px
+        font-size: 14px
+        pre
+          overflow: auto
+        div
+          word-break: break-all
+        div, h2, p, pre
+          margin: 0
+        img
+          width: 100%
+        .inputsGroup
+          input
+            padding: 4px
+        .buttons
+          margin-top: 4px
+          text-align: right
+          button:not(:last-child)
+            margin-right: 4px
+        .cantCompute
+          display: flex
+          align-items: flex-end
+          justify-content: center
+          i
+            margin-right: 4px
+            color: orange
+      input
+        box-sizing: border-box
+.elementShell:hover
+  border-color: $dark-color !important
+  .shellHeader
+    color: $dark-color !important
+.elementShell.selected
+  border-color: $dark-color !important
+  .shellHeader
+    background: $dark-color !important
+    color: white !important
+  .contentElement
+    background: $gray-color
+.editLabel
+  color: blue !important
+  margin-left: 4px !important
+.editLabel:hover
+  text-decoration: underline
+
+.panel
+  background: white
+  display: block
+  border: 1px solid $light-color
+  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.2)
+  border-radius: 3px
+  padding: 8px
+  position: fixed
+  bottom: 0
+  margin: auto
+  width: 800px
+  box-sizing: border-box
+  @media(max-width: 768px)
+    width: 100vw
+    left: 0
+  .other
+    display: block
+    text-align: right
+    margin-top: 8px
+    button:not(:first-child)
+      margin-left: 6px
+  @media(max-width: 768px)
+    .controls
+      width: 100% !important
+  .controls
+    width: 784px
+    display: flex
+    justify-content: space-between
+    @media(max-width: 768px)
+      button
+        i
+          margin: 0 !important
+        span
+          display: none
+    .group
+      display: flex
+      button:not(:last-child)
+        margin-right: 6px
+      select
+        margin-right: 4px
+        transform: translateY(1px)
+      @media(max-width: 768px)
+        .addElement
+          span
+            display: none
+          i
+            margin: 0 !important
+  .mode
+    display: none
+    button:not(:last-child)
+      margin-right: 8px
+// Список статей
+.listOfArticles
+  h1
+    margin-top: 0
+  .viewer
+    display: flex
+    flex-direction: column
+    button
+      i.material-icons
+        cursor: pointer
+        color: gray
+      i.material-icons:hover
+        color: black
+    button:not(:last-child)
+      margin-bottom: 8px
+  .group
+    display: flex
+    justify-content: space-between

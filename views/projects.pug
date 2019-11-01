@@ -1,0 +1,37 @@
+extends layout
+
+block styles
+  link(rel='stylesheet' href='/stylesheets/projects.css')
+
+block scripts
+  script(src='/javascripts/projects.js')
+  
+block content
+  .page-header
+    h1 Мои проекты
+  unless projects && projects.length > 0
+    .no-one-item Нет ни одного проекта.
+  else
+    each project in projects
+      .project
+        h2.title= project.title
+        p.description= project.description
+        if project.posts.length > 0
+          p.last-version
+            span Последняя версия 
+            span.version= project.posts[0].version
+        p.posts-count
+          if project.posts.length > 0
+            span.count-of-posts= project.posts.length
+            span
+              if project.posts.length > 1
+                |  постов
+              else
+                |  пост
+          else
+            span Нет постов
+            
+        a(href='/projects/'+project.url) Подробнее
+    
+block sidebar
+  .message В данном разделе вы можете ознакомиться с моими проектами. 

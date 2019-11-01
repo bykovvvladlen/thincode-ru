@@ -1,0 +1,290 @@
+h1, h2
+  font-weight: 500
+.headerPlaceholder
+  height: 60px
+span.dot
+  background: black
+  width: 3px
+  height: 3px
+  border-radius: 16px
+  display: inline-block
+  vertical-align: middle
+  margin: 0 6px
+
+header
+  position: fixed
+  width: 100%
+  z-index: 10
+  background: white
+  top: 0
+  display: flex
+  border-bottom: 1px solid lightgray
+  box-sizing: border-box
+  justify-content: space-between
+  padding: 8px 0
+  .group
+    display: flex
+    margin-right: 16px
+    @media(max-width: 768px)
+      margin-right: 0
+  @media(max-width: 768px)
+    padding: 8px 16px
+  .nav
+    text-align: right
+    align-self: center
+    margin-right: 16px
+    display: flex
+    align-items: center
+    @media(max-width: 768px)
+      display: none
+    a
+      color: gray
+      text-decoration: none
+      text-transform: uppercase
+      margin: 0.75em
+      transition: 0.2s
+    a:hover
+      color: black
+  .mobile
+    background: none
+    border: none
+    display: none
+    outline: none
+    @media(max-width: 768px)
+      display: inline-flex
+      justify-content: center
+      align-content: center
+  a.logo
+    display: flex
+    align-items: center
+    color: black
+    text-decoration: none
+    margin-left: 16px
+    @media(max-width: 768px)
+      margin-left: 0
+    .description
+      display: grid
+      grid-template-rows: 1fr 1fr
+      width: auto
+      margin-left: 18px
+      opacity: 0.7
+    .title
+      display: inline-flex
+      font-size: 36px
+      justify-content: flex-start
+      .thin
+        transform: scaleX(1) translateX(13px)
+        transition: 3s
+      .code
+        transform: scaleX(0.4) translateX(0px)
+        transition: 3s
+.search-results
+  position: fixed
+  right: 18px
+  z-index: 2
+  background: white
+  padding: 18px
+  box-shadow: 0 7.5px 8px rgba(0, 0, 0, 0.15)
+  border: 1px solid lightgray
+  min-width: 300px
+  p
+    margin: 0
+  a
+    display: block
+    color: blue
+.search
+  background: #f1f1f1
+  display: flex
+  align-items: center
+  color: gray
+  width: 200px
+  border: 1px solid lightgray
+  border-radius: 5px
+  box-shadow: inset 0px 4px 4px #eaeaea
+  input
+    border: none
+    background: none
+    outline: none
+    font-size: inherit
+    margin-right: 16px
+    overflow: hidden
+    font-family: 'Alegreya Sans'
+    font-size: 18px
+  i
+    margin: 8px 16px
+  @media(max-width: 850px)
+    display: none
+
+.nav-mobile
+  display: none
+
+.material-icons
+  user-select: none
+
+.softbutton
+  outline: none
+  cursor: pointer
+  user-select: none
+  text-align: center
+  color: #6b6b6b
+  text-decoration: none
+  padding: 8px 24px
+  background-color: hsl(0, 0%, 93%)
+  font-weight: 500
+  text-transform: uppercase
+  font-size: 13px !important
+  border: 1px solid lightgray
+  border-radius: 2px
+  box-shadow: 0 2px 2px #ababab
+  font-family: 'Alegreya Sans' !important
+
+.softbutton:hover
+  box-shadow: none
+  border-color: gray
+
+.softbutton:active
+  box-shadow: inset 0 2px 2px #ababab
+body
+  margin: 0
+  font-family: 'Alegreya Sans'
+  background: #f1f1f1
+  .container
+    display: flex
+    justify-content: space-between
+    max-width: 1200px
+    margin: 16px auto 0 auto
+    .content
+      width: calc(67% - 8px)
+    .content > div:not(:last-child)
+      margin-bottom: 16px
+    .content > div
+      padding: 16px
+      background: white
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05)
+    .sidebar
+      position: fixed
+    .sidebar > div
+      h2
+        margin-top: 0
+      padding: 16px
+      box-sizing: border-box
+      background: white
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05)
+      margin-bottom: 16px
+    @media(max-width: 768px)
+      .content
+        width: 100%
+      .sidebar
+        display: none
+
+.ghost
+  color: gray
+  text-transform: uppercase
+  font-size: 12px
+
+.keywords
+  span::before
+    content: '#'
+
+footer
+  background-color: #202020
+  color: #999
+  padding: 18px 0
+  margin-top: 16px
+  box-sizing: border-box
+  width: 100%
+  bottom: 0
+  position: fixed
+  .btn-group
+    @media(max-width: 768px)
+      display: flex
+      flex-direction: column
+    a:not(:first-child)
+      margin-left: 8px
+      @media(max-width: 768px)
+        margin-left: 0
+        margin-top: 8px
+  @media(max-width: 768px)
+    padding: 18px 16px
+  .content
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  .info
+    display: flex
+    flex-direction: column
+    span
+      a
+        color: inherit
+        text-decoration: none
+    small
+      opacity: 0.5
+  a.control
+    border: 1px #999 solid
+    border-radius: 5px
+    padding: 8px
+    font-size: 12px
+    display: inline-flex
+    text-decoration: none
+    color: #999
+    transition: 0.3s
+    text-transform: uppercase
+  a.control:hover
+    background: #999
+    color: #202020
+
+// loader
+.lds-ellipsis
+  display: block
+  position: relative
+  width: 64px
+  height: 64px
+  margin: auto
+
+  div
+    position: absolute
+    top: 27px
+    width: 11px
+    height: 11px
+    border-radius: 50%
+    background: #6b6b6b
+    animation-timing-function: cubic-bezier(0, 1, 1, 0)
+
+    &:nth-child(1)
+      left: 6px
+      animation: lds-ellipsis1 0.6s infinite
+
+    &:nth-child(2)
+      left: 6px
+      animation: lds-ellipsis2 0.6s infinite
+
+    &:nth-child(3)
+      left: 26px
+      animation: lds-ellipsis2 0.6s infinite
+
+    &:nth-child(4)
+      left: 45px
+      animation: lds-ellipsis3 0.6s infinite
+
+@keyframes lds-ellipsis1
+  0%
+    transform: scale(0)
+
+  100%
+    transform: scale(1)
+
+@keyframes lds-ellipsis3
+  0%
+    transform: scale(1)
+
+  100%
+    transform: scale(0)
+
+@keyframes lds-ellipsis2
+  0%
+    transform: translate(0, 0)
+
+  100%
+    transform: translate(19px, 0)

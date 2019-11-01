@@ -1,0 +1,206 @@
+.common-btn {
+  padding: 8px;
+  background: #d5d7de;
+  border: solid #aaa 1px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px; }
+  .common-btn i.material-icons {
+    font-size: 18px;
+    max-height: 12px;
+    margin-left: 4px;
+    transform: translateY(-4px); }
+
+.common-btn.right-icon i.material-icons {
+  margin-left: 0px !important;
+  margin-right: 4px !important; }
+
+.common-btn:hover {
+  box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.1); }
+
+.common-btn:active {
+  background: #ccc; }
+
+select {
+  padding: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.25); }
+
+.container .content {
+  margin: auto; }
+
+.detailedArticle input {
+  padding: 8px;
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.25);
+  border: 1px #ccc solid;
+  font-family: inherit;
+  font-size: 14px;
+  margin-bottom: 4px;
+  outline: 0; }
+
+.detailedArticle .form {
+  display: flex;
+  flex-direction: column; }
+
+.detailedArticle .markupTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2d303a;
+  padding: 4px;
+  margin: 8px 0;
+  color: white; }
+  .detailedArticle .markupTitle .buttons {
+    display: flex; }
+    .detailedArticle .markupTitle .buttons i {
+      cursor: pointer; }
+    .detailedArticle .markupTitle .buttons i:hover {
+      color: lightgray; }
+    .detailedArticle .markupTitle .buttons i:active {
+      color: gray; }
+
+.detailedArticle .viewer .elementShell:not(:last-child) {
+  margin-bottom: 4px; }
+
+.detailedArticle .viewer .elementShell {
+  border: 1px solid #ccc;
+  transition: 0.2s; }
+  .detailedArticle .viewer .elementShell .shellHeader {
+    padding: 4px;
+    background: #ddd;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin: 0;
+    color: #aaa; }
+  .detailedArticle .viewer .elementShell .contentElement {
+    padding: 4px 4px 4px 4px;
+    font-size: 14px; }
+    .detailedArticle .viewer .elementShell .contentElement a {
+      color: #3F51B5; }
+    .detailedArticle .viewer .elementShell .contentElement span.marked {
+      background: #ddd;
+      color: #4c3800;
+      padding: 0 4px; }
+    .detailedArticle .viewer .elementShell .contentElement .inputsGroup input {
+      display: block;
+      width: 100%; }
+    .detailedArticle .viewer .elementShell .contentElement pre {
+      overflow: auto; }
+    .detailedArticle .viewer .elementShell .contentElement div {
+      word-break: break-all; }
+    .detailedArticle .viewer .elementShell .contentElement div, .detailedArticle .viewer .elementShell .contentElement h2, .detailedArticle .viewer .elementShell .contentElement p, .detailedArticle .viewer .elementShell .contentElement pre {
+      margin: 0; }
+    .detailedArticle .viewer .elementShell .contentElement img {
+      width: 100%; }
+    .detailedArticle .viewer .elementShell .contentElement .inputsGroup input {
+      padding: 4px; }
+    .detailedArticle .viewer .elementShell .contentElement .buttons {
+      margin-top: 4px;
+      text-align: right; }
+      .detailedArticle .viewer .elementShell .contentElement .buttons button:not(:last-child) {
+        margin-right: 4px; }
+    .detailedArticle .viewer .elementShell .contentElement .cantCompute {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center; }
+      .detailedArticle .viewer .elementShell .contentElement .cantCompute i {
+        margin-right: 4px;
+        color: orange; }
+  .detailedArticle .viewer .elementShell input {
+    box-sizing: border-box; }
+
+.elementShell:hover {
+  border-color: #2d303a !important; }
+  .elementShell:hover .shellHeader {
+    color: #2d303a !important; }
+
+.elementShell.selected {
+  border-color: #2d303a !important; }
+  .elementShell.selected .shellHeader {
+    background: #2d303a !important;
+    color: white !important; }
+  .elementShell.selected .contentElement {
+    background: #d5d7de; }
+
+.editLabel {
+  color: blue !important;
+  margin-left: 4px !important; }
+
+.editLabel:hover {
+  text-decoration: underline; }
+
+.panel {
+  background: white;
+  display: block;
+  border: 1px solid #aaa;
+  box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 8px;
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  width: 800px;
+  box-sizing: border-box; }
+  @media (max-width: 768px) {
+    .panel {
+      width: 100vw;
+      left: 0; } }
+  .panel .other {
+    display: block;
+    text-align: right;
+    margin-top: 8px; }
+    .panel .other button:not(:first-child) {
+      margin-left: 6px; }
+  @media (max-width: 768px) {
+    .panel .controls {
+      width: 100% !important; } }
+  .panel .controls {
+    width: 784px;
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 768px) {
+      .panel .controls button i {
+        margin: 0 !important; }
+      .panel .controls button span {
+        display: none; } }
+    .panel .controls .group {
+      display: flex; }
+      .panel .controls .group button:not(:last-child) {
+        margin-right: 6px; }
+      .panel .controls .group select {
+        margin-right: 4px;
+        transform: translateY(1px); }
+      @media (max-width: 768px) {
+        .panel .controls .group .addElement span {
+          display: none; }
+        .panel .controls .group .addElement i {
+          margin: 0 !important; } }
+  .panel .mode {
+    display: none; }
+    .panel .mode button:not(:last-child) {
+      margin-right: 8px; }
+
+.listOfArticles h1 {
+  margin-top: 0; }
+
+.listOfArticles .viewer {
+  display: flex;
+  flex-direction: column; }
+  .listOfArticles .viewer button i.material-icons {
+    cursor: pointer;
+    color: gray; }
+  .listOfArticles .viewer button i.material-icons:hover {
+    color: black; }
+  .listOfArticles .viewer button:not(:last-child) {
+    margin-bottom: 8px; }
+
+.listOfArticles .group {
+  display: flex;
+  justify-content: space-between; }
+
+/*# sourceMappingURL=control.css.map */

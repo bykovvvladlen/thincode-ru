@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title #{title} / thincode
+    meta(content='width=device-width, initial-scale=1' name='viewport')
+    meta(name='yandex-verification' content='ad72ec66f9b3a383')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,500,800&display=swap')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined')
+    block styles
+    script(src='https://www.googletagmanager.com/gtag/js?id=UA-145060361-1' async)
+    script(src='/javascripts/gtag.js')
+    script(src='/javascripts/layout.js')
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+  body
+    include modules/header
+    .container
+      .content
+        block content
+      .sidebar
+        block sidebar
+    include modules/footer
+    block scripts

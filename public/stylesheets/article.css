@@ -1,0 +1,112 @@
+.container > .content img {
+  max-width: 100%;
+  border-radius: 3px;
+  user-select: none;
+  display: block;
+  margin: auto; }
+
+.rating .text {
+  margin-top: 0; }
+
+.rating .thanks {
+  display: none; }
+
+.rating button:not(:last-child) {
+  margin-right: 16px; }
+
+pre {
+  font-size: 14px !important; }
+  @media (max-width: 768px) {
+    pre {
+      font-size: 12px !important; } }
+
+.comments textarea {
+  border-color: lightgray; }
+
+.comments .comment {
+  margin-bottom: 16px; }
+  .comments .comment span.dot {
+    background: gray; }
+  .comments .comment .author, .comments .comment .date, .comments .comment a {
+    display: inline-block; }
+  .comments .comment .author {
+    font-weight: 500; }
+  .comments .comment .date {
+    color: gray; }
+  .comments .comment a {
+    margin-left: 8px;
+    display: none; }
+
+.comments .comment:hover a {
+  display: inline-block; }
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap; }
+
+.sections ol {
+  padding-left: 20px; }
+
+.sections a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dotted gray; }
+
+.sections a:hover {
+  color: gray; }
+
+.recommendation .dot {
+  background: gray; }
+
+.recommendation .date, .recommendation .category {
+  color: gray;
+  display: inline; }
+
+.recommendation a {
+  color: #4848d4;
+  display: block;
+  font-weight: 500; }
+
+.comments .noone {
+  color: gray; }
+
+.comments .form {
+  display: flex; }
+  .comments .form button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: gray;
+    outline: none; }
+  .comments .form button:hover {
+    color: black; }
+  .comments .form textarea {
+    font-family: inherit;
+    padding: 8px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    width: 100%; }
+
+.article .group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px; }
+  .article .group .item {
+    margin-right: 16px; }
+
+.markup img {
+  margin-bottom: 16px !important; }
+
+.markup .paragraph {
+  margin-bottom: 16px; }
+
+.markup a {
+  color: #3F51B5; }
+
+.markup span.marked {
+  background: #ddd;
+  color: #4c3800;
+  padding: 0 4px; }
+
+/*# sourceMappingURL=article.css.map */
